@@ -3,28 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aionpacha Portfolio</title>
+  <title>Aionpacha Masonry Gallery</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
     body {
       background-color: #121212;
       color: #ffffff;
     }
-    .card {
-      background-color: #1e1e1e;
-      border: none;
-    }
-    .card-img-top {
-      object-fit: cover;
-      height: 250px;
-    }
-    .card-text {
-      color: #bbb;
-    }
     .navbar-brand img {
       height: 80px;
       width: auto;
       margin-right: 10px;
+    }
+    .masonry {
+      column-count: 3;
+      column-gap: 1rem;
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      background-color: #1e1e1e;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+    .masonry-item img,
+    .masonry-item video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+    .card-body {
+      padding: 0.5rem 1rem 1rem 1rem;
+    }
+    .card-text {
+      color: #bbb;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .masonry {
+        column-count: 2;
+      }
+    }
+    @media (max-width: 576px) {
+      .masonry {
+        column-count: 1;
+      }
     }
   </style>
 </head>
@@ -40,134 +64,88 @@
   </nav>
 
   <header class="py-5 text-center">
-    <h1 class="display-4 fw-bold">My Photo & Video Portfolio</h1>
-    <p class="lead text-muted">A showcase of my creative work</p>
+    <h1 class="display-4 fw-bold">My Puzzle Gallery</h1>
+    <p class="lead text-muted">Aionpacha — Natural Flow of Creativity</p>
   </header>
 
   <main class="container pb-5">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+    <div class="masonry">
 
-      <!-- Image 1 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/8Pxt76wK/Chat-GPT-Image-12-jun-2025-20-39-17.png" class="card-img-top" alt="Image 1" />
-          <div class="card-body"><p class="card-text">Image 1</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/8Pxt76wK/Chat-GPT-Image-12-jun-2025-20-39-17.png" alt="Image 1">
+        <div class="card-body"><p class="card-text">Image 1</p></div>
       </div>
 
-      <!-- Image 2 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/DzT6g391/Chat-GPT-Image-12-jun-2025-20-41-37.png" class="card-img-top" alt="Image 2" />
-          <div class="card-body"><p class="card-text">Image 2</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/DzT6g391/Chat-GPT-Image-12-jun-2025-20-41-37.png" alt="Image 2">
+        <div class="card-body"><p class="card-text">Image 2</p></div>
       </div>
 
-      <!-- Image 3 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/jSzQCkD2/Chat-GPT-Image-12-jun-2025-20-54-19.png" class="card-img-top" alt="Image 3" />
-          <div class="card-body"><p class="card-text">Image 3</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/jSzQCkD2/Chat-GPT-Image-12-jun-2025-20-54-19.png" alt="Image 3">
+        <div class="card-body"><p class="card-text">Image 3</p></div>
       </div>
 
-      <!-- GIF 4 (Photographic Mastery - fixed size) -->
-      <div class="col">
-        <div class="card shadow-sm bg-transparent border-0">
-          <video autoplay loop muted playsinline style="width: 100%; height: auto; border-radius: 0.5rem;">
-            <source src="https://i.postimg.cc/rmYHyFm5/20250324-2247-Panther-s-Photographic-Mastery-simple-compose-01jq5pjcwjecn9q2x9254t7vp8.gif" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div class="card-body"><p class="card-text">Photographic Mastery</p></div>
-        </div>
+      <div class="masonry-item">
+        <video autoplay loop muted playsinline>
+          <source src="https://i.postimg.cc/rmYHyFm5/20250324-2247-Panther-s-Photographic-Mastery-simple-compose-01jq5pjcwjecn9q2x9254t7vp8.gif" type="video/mp4">
+        </video>
+        <div class="card-body"><p class="card-text">GIF 4</p></div>
       </div>
 
-      <!-- GIF 5 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/br7FbC1J/20250324-2309-Cat-and-Butterfly-Transformation-storyboard-01jq5qvpcdf9mrysmnsw1wbbt3.gif" class="card-img-top" alt="GIF 5" />
-          <div class="card-body"><p class="card-text">GIF 5</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/br7FbC1J/20250324-2309-Cat-and-Butterfly-Transformation-storyboard-01jq5qvpcdf9mrysmnsw1wbbt3.gif" alt="GIF 5">
+        <div class="card-body"><p class="card-text">GIF 5</p></div>
       </div>
 
-      <!-- Image 6 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/RhNjwJ8P/20250603-2223-Vaso-Compostable-en-Naturaleza-simple-compose-01jwwfbtanenarrtrzf2yx22wf.png" class="card-img-top" alt="Image 6" />
-          <div class="card-body"><p class="card-text">Image 6</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/RhNjwJ8P/20250603-2223-Vaso-Compostable-en-Naturaleza-simple-compose-01jwwfbtanenarrtrzf2yx22wf.png" alt="Image 6">
+        <div class="card-body"><p class="card-text">Image 6</p></div>
       </div>
 
-      <!-- Image 7 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/rmQk1kpp/20250605-1959-Shiny-Spiral-Clouds-remix-01jx1bwv09eb0r0vq7v69pe0wj.png" class="card-img-top" alt="Image 7" />
-          <div class="card-body"><p class="card-text">Image 7</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/rmQk1kpp/20250605-1959-Shiny-Spiral-Clouds-remix-01jx1bwv09eb0r0vq7v69pe0wj.png" alt="Image 7">
+        <div class="card-body"><p class="card-text">Image 7</p></div>
       </div>
 
-      <!-- Image 8 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/HL0HL5DX/20250610-2343-Paper-Straw-Nest-simple-compose-01jxems5xqfp79da25zhsmd93a.png" class="card-img-top" alt="Image 8" />
-          <div class="card-body"><p class="card-text">Image 8</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/HL0HL5DX/20250610-2343-Paper-Straw-Nest-simple-compose-01jxems5xqfp79da25zhsmd93a.png" alt="Image 8">
+        <div class="card-body"><p class="card-text">Image 8</p></div>
       </div>
 
-      <!-- Image 9 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/4y0R0QVk/20250610-2348-Eco-Friendly-Product-Pattern-simple-compose-01jxen1898f0s976qyfg119hx7.png" class="card-img-top" alt="Image 9" />
-          <div class="card-body"><p class="card-text">Image 9</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/4y0R0QVk/20250610-2348-Eco-Friendly-Product-Pattern-simple-compose-01jxen1898f0s976qyfg119hx7.png" alt="Image 9">
+        <div class="card-body"><p class="card-text">Image 9</p></div>
       </div>
 
-      <!-- Image 10 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/63QSNG99/A-logo-for-Captura-Indo-mita-features-a-golden-cr.png" class="card-img-top" alt="Image 10" />
-          <div class="card-body"><p class="card-text">Image 10</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/63QSNG99/A-logo-for-Captura-Indo-mita-features-a-golden-cr.png" alt="Image 10">
+        <div class="card-body"><p class="card-text">Image 10</p></div>
       </div>
 
-      <!-- Image 11 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/jq1VtvwB/Chat-GPT-Image-29-may-2025-19-37-07.png" class="card-img-top" alt="Image 11" />
-          <div class="card-body"><p class="card-text">Image 11</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/jq1VtvwB/Chat-GPT-Image-29-may-2025-19-37-07.png" alt="Image 11">
+        <div class="card-body"><p class="card-text">Image 11</p></div>
       </div>
 
-      <!-- Image 12 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/nhvNKJRt/Chat-GPT-Image-29-may-2025-19-38-02.png" class="card-img-top" alt="Image 12" />
-          <div class="card-body"><p class="card-text">Image 12</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/nhvNKJRt/Chat-GPT-Image-29-may-2025-19-38-02.png" alt="Image 12">
+        <div class="card-body"><p class="card-text">Image 12</p></div>
       </div>
 
-      <!-- Image 13 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/5NQh0v8y/Default-dont-want-to-see-the-light-the-lamp-y-just-wan-t-to-se-0.jpg" class="card-img-top" alt="Image 13" />
-          <div class="card-body"><p class="card-text">Image 13</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/5NQh0v8y/Default-dont-want-to-see-the-light-the-lamp-y-just-wan-t-to-se-0.jpg" alt="Image 13">
+        <div class="card-body"><p class="card-text">Image 13</p></div>
       </div>
 
-      <!-- Image 14 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/J7Y8tMg6/Gemini-Generated-Image-j6f5kyj6f5kyj6f5.png" class="card-img-top" alt="Image 14" />
-          <div class="card-body"><p class="card-text">Image 14</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/J7Y8tMg6/Gemini-Generated-Image-j6f5kyj6f5kyj6f5.png" alt="Image 14">
+        <div class="card-body"><p class="card-text">Image 14</p></div>
       </div>
 
-      <!-- Image 15 -->
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src="https://i.postimg.cc/6QKJF323/Leonardo-Kino-XL-A-wheel-of-fortune-showcasing-a-variety-of-co-0.jpg" class="card-img-top" alt="Image 15" />
-          <div class="card-body"><p class="card-text">Image 15</p></div>
-        </div>
+      <div class="masonry-item">
+        <img src="https://i.postimg.cc/6QKJF323/Leonardo-Kino-XL-A-wheel-of-fortune-showcasing-a-variety-of-co-0.jpg" alt="Image 15">
+        <div class="card-body"><p class="card-text">Image 15</p></div>
       </div>
 
     </div>
@@ -180,3 +158,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
