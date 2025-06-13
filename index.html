@@ -41,12 +41,18 @@
       transform: translateY(-50%);
     }
     .audio-control button {
-      background-color: #444;
-      color: #fff;
+      background-color: #00b894;
+      color: white;
+      font-weight: bold;
       border: none;
       padding: 6px 12px;
       font-size: 0.9rem;
       border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease;
+    }
+    .audio-control button:hover {
+      background-color: #00a381;
     }
     @media (max-width: 768px) {
       .masonry {
@@ -88,18 +94,20 @@
 
 <header class="py-5 text-center">
   <h1 class="display-4 fw-bold">El Archivo de Luz</h1>
-  <p class="lead" style="color: rgba(255, 255, 255, 0.85); font-size: 1.25rem;">Un viaje colaborativo en la creación con inteligencia artificial</p>
+  <p class="lead" style="color: rgba(255, 255, 255, 0.85); font-size: 1.25rem;">
+    Un viaje colaborativo en la creación con inteligencia artificial
+  </p>
 </header>
 
 <main class="container pb-5">
   <div class="masonry">
 
-    <!-- Nuevo GIF al inicio -->
+    <!-- Nuevo GIF -->
     <div class="masonry-item">
-      <img src="20250613_0228_Tranquil Stream Bathing_simple_compose_01jxm30n1xehgaxx5rfc05nte0.gif" alt="">
+      <img src="54ff6556-09dc-44b8-81ce-0a081059ce26.gif" alt="Nuevo gif">
     </div>
 
-    <!-- Galería completa sin duplicados -->
+    <!-- Imágenes de galería -->
     <div class="masonry-item"><img src="https://i.postimg.cc/8Pxt76wK/Chat-GPT-Image-12-jun-2025-20-39-17.png" alt=""></div>
     <div class="masonry-item"><img src="https://i.postimg.cc/DzT6g391/Chat-GPT-Image-12-jun-2025-20-41-37.png" alt=""></div>
     <div class="masonry-item"><img src="https://i.postimg.cc/jSzQCkD2/Chat-GPT-Image-12-jun-2025-20-54-19.png" alt=""></div>
@@ -118,9 +126,9 @@
     <div class="masonry-item"><img src="https://i.postimg.cc/hPNxVJhf/generation-0b923dda-3ca1-4be7-ab84-e3dff291c67e.png" alt=""></div>
     <div class="masonry-item"><img src="https://i.postimg.cc/RhNjwJ8P/20250603-2223-Vaso-Compostable-en-Naturaleza-simple-compose-01jwwfbtanenarrtrzf2yx22wf.png" alt=""></div>
 
-    <!-- GIF final -->
+    <!-- GIF del globo -->
     <div class="masonry-item">
-      <img src="20250610_2255_Animal Council on Earth_remix_01jxej22r9fp58yxbkk5ebkgp0.gif" alt="GIF de animales con globo">
+      <img src="20250610_2255_Animal Council on Earth_remix_01jxej22r9fp58yxbkk5ebkgp0.gif" alt="GIF del globo con animales">
     </div>
 
   </div>
